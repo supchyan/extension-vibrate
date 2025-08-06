@@ -3,16 +3,17 @@
 
 #if defined(DM_PLATFORM_IOS)
 
-
 #include "AudioToolbox/AudioServices.h"
-
 
 int VibratePlatform_Trigger()
 {
-	// https://stackoverflow.com/questions/26455880/how-to-make-iphone-vibrate-using-swift
+    	// TODO:
+    	// https://stackoverflow.com/questions/26455880/how-to-make-iphone-vibrate-using-swift
     	// .light = 3 
     	// UIImpactFeedbackGenerator(style: .light).impactOccurred() ???
-	AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+
+    	// legacy vibration (shit)
+	// AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 	return 1;
 }
 
