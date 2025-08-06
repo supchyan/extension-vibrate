@@ -15,13 +15,17 @@ class VibrateExtension {
 		activity.runOnUiThread(new Runnable() {
 			@Override
 			public void run() {
-				Vibrator v = (Vibrator)activity.getSystemService(Context.VIBRATOR_SERVICE);
-				if (Build.VERSION.SDK_INT >= 26) {
-					v.vibrate(VibrationEffect.createOneShot(50, VibrationEffect.EFFECT_CLICK));
-				} else {
-					//deprecated in API 26 
-					v.vibrate(50);
-				}
+		                // API 29+
+		                final VibrationEffect vEffect;
+		              
+				Vibrator vibrator = (Vibrator)activity.getSystemService(Context.VIBRATOR_SERVICE);
+		
+		                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
+		                {
+		                    vEffect = VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK);
+		                    vibrator.cancel();
+		                    vibrator.vibrate(vEffect);
+		                }
 			}
 		});
 	}
