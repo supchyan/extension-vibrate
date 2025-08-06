@@ -17,10 +17,10 @@ class VibrateExtension {
 			public void run() {
 				Vibrator v = (Vibrator)activity.getSystemService(Context.VIBRATOR_SERVICE);
 				if (Build.VERSION.SDK_INT >= 26) {
-					v.vibrate(VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE));
+					v.vibrate(VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE));
 				} else {
 					//deprecated in API 26 
-					v.vibrate(1000);
+					v.vibrate(100);
 				}
 			}
 		});
