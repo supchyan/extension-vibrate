@@ -18,7 +18,7 @@ The currently supported platforms are: ~~iOS~~ **NOT IN MY FORK** and Android
 
 ## How do I use this extension?
 
-Add the package link (https://github.com/adamwestman/extension-vibrate/archive/master.zip)
+Add the package link (https://github.com/supchyan/extension-vibrate/archive/refs/heads/master.zip)
 to the project setting `project.dependencies`, and you should be good to go.
 
 See the [manual](http://www.defold.com/manuals/libraries/) for further info.
