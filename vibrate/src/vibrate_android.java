@@ -23,7 +23,7 @@ class VibrateExtension {
 		                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
 		                {
 		                    vEffect = VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK);
-		                    vibrator.cancel();
+		                    // vibrator.cancel(); // not recommeneded to disable this, BUT I DON'T CARE!!1XD
 		                    vibrator.vibrate(vEffect);
 		                }
 			}
